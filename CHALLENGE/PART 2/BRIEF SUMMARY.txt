@@ -1,0 +1,26 @@
+Below is a summary of how and why each table was created.
+
+Partone table
+Created FROM existing retirement_info table to get all retiring employees
+used inner joins with titles table and with salaries table to add that information to retiring employees table
+
+Then: changed partone table
+executed a DELETE FROM partone table to remove duplicate titles to get only the most recent title for that employee
+NOTE: used a select sanity check to verify deduped tables later on, not storing the info, just checking
+
+Then: Partone_title_agg
+used this updated partone table to execute a SELECT COUNT to GROUPBY the number of employees retiring by title
+
+Then: mentee_info
+SELECT'ed data from employees table where certain conditions are met (birthday) and received emp number, name based on that condition
+
+Then: current_mentee_no_titles
+FROM mentee_info, take emp number, last/first name, execute inner join with dept_emp table where certain conditions are true (is still a current employee), add data from dept_emp table surrounding to and from dates to mentee data
+
+Then: current_mentee_titles
+FROM current_mentee_no_titles, execute inner join with titles table to add in titles to the mentee list and return a new table  
+
+INSIGHTS
+There are 23,330 people approaching retirement - most are STAFF or ENGINEER 
+There are 2,382 people ready for a mentor
+Reccoment analyzing the titles of those ready for a mentor versus the availability of mentors in the same department
