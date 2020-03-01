@@ -22,5 +22,5 @@ FROM current_mentee_no_titles, execute inner join with titles table to add in ti
 
 INSIGHTS
 There are 23,330 people approaching retirement - most are STAFF or ENGINEER 
-There are 2,382 people ready for a mentor
+There are 661 people ready for a mentor
 Reccoment analyzing the titles of those ready for a mentor versus the availability of mentors in the same department
